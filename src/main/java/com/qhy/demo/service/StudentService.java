@@ -7,5 +7,6 @@ import com.qhy.demo.pojo.Student;
 public interface StudentService {
 
 	List<Student> listStudent();
+	int saveObject();
 
 }

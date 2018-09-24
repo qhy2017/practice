@@ -2,6 +2,8 @@ package com.qhy.demo.controller;
 
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,6 +30,18 @@ public class DemoController {
 		json.put("message", "message,中国你好");
 		json.put("data", pageInfo);
 		return json;
+	}
+
+	@ResponseBody
+	@RequestMapping("/saveObject")
+	public int saveObject() {
+		try {
+			int saveObject = studentService.saveObject();
+			return saveObject;
+		} catch (Exception e) {
+			return 0;
+		}
+
 	}
 
 }
