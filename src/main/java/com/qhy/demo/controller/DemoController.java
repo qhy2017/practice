@@ -73,14 +73,9 @@ public class DemoController {
 	@ResponseBody
 	@RequestMapping(value = "/getBpmnList")
 	public Object getBpmnList() {
-		// Deployment deploy =
-		// repositoryService.createDeployment().addClasspathResource("/processes/MyProcess.bpmn")
-		// .deploy();
-		// System.out.println(deploy.getId());
 		List<ProcessDefinition> list = repositoryService.createProcessDefinitionQuery().list();
 		JSONArray jsonArray = new JSONArray();
 		JSONObject jsonObject = null;
-		// long count = repositoryService.createProcessDefinitionQuery().count();
 		for (ProcessDefinition item : list) {
 			jsonObject = new JSONObject();
 			jsonObject.put("Category", item.getCategory());
