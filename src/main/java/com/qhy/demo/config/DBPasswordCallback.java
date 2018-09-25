@@ -3,6 +3,7 @@ package com.qhy.demo.config;
 import java.util.Base64;
 import java.util.Properties;
 import com.alibaba.druid.util.DruidPasswordCallback;
+import com.qhy.demo.util.MessageUtils;
 
 public class DBPasswordCallback extends DruidPasswordCallback {
 	private static final long serialVersionUID = -340126248593018959L;
@@ -14,9 +15,8 @@ public class DBPasswordCallback extends DruidPasswordCallback {
 		String pwd = properties.getProperty(DB_PWD);
 		if (pwd != null && !"".equals(pwd.trim())) {
 			try {
-				byte[] decode = Base64.getDecoder().decode(String.valueOf(pwd));
-				String result = new String(decode);
-				setPassword(result.toCharArray());
+				String returnMessage = MessageUtils.returnMessage(pwd);
+				setPassword(returnMessage.toCharArray());
 			} catch (Exception e) {
 				setPassword(pwd.toCharArray());
 			}

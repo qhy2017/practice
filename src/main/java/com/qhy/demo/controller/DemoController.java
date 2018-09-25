@@ -21,6 +21,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.qhy.demo.pojo.Student;
 import com.qhy.demo.service.StudentService;
+import com.qhy.demo.util.MessageUtils;
 
 @Controller
 public class DemoController {
@@ -94,5 +95,10 @@ public class DemoController {
 			jsonArray.add(jsonObject);
 		}
 		return jsonArray;
+	}
+
+	public String getStr() {
+
+		return "";
 	}
 }
