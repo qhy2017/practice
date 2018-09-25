@@ -14,7 +14,7 @@
 	<!-- 自动扫描web包 ,将带有注解的类 纳入spring容器管理 -->
 	<context:component-scan
 		base-package="com.qhy.demo.controller"></context:component-scan>
-	<import resource="classpath:/spring/spring-*.xml" />
+	<import resource="classpath:spring/spring-*.xml" />
 	
 </beans>
 
