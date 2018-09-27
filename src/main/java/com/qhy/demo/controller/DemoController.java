@@ -2,13 +2,10 @@ package com.qhy.demo.controller;
 
 import java.util.List;
 
-import javax.annotation.Resource;
-
 import org.activiti.engine.ProcessEngine;
 import org.activiti.engine.ProcessEngineConfiguration;
 import org.activiti.engine.RepositoryService;
 import org.activiti.engine.RuntimeService;
-import org.activiti.engine.repository.Deployment;
 import org.activiti.engine.repository.ProcessDefinition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,7 +18,6 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.qhy.demo.pojo.Student;
 import com.qhy.demo.service.StudentService;
-import com.qhy.demo.util.MessageUtils;
 
 @Controller
 public class DemoController {
